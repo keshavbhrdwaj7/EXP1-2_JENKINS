@@ -34,13 +34,18 @@ public class MyCalculator {
         return a % b;
     }
 
+    public static int square(int a) {
+        return a * a;
+    }
+
     public static void main(String[] args) {
         MyCalculator myCalc = new MyCalculator();
         System.out.println(myCalc.add(1, 2));
         System.out.println(myCalc.subtract(1, 2));
         System.out.println(MyCalculator.multiply(1, 2));
         System.out.println(MyCalculator.divide(1, 2));
-        System.out.println(MyCalculator.power(1, 2));
+        System.out.println(MyCalculator.power(2, 3));
         System.out.println(MyCalculator.modulus(5, 3));
+        System.out.println(MyCalculator.square(4));
     }
 }
