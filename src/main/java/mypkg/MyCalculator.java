@@ -14,6 +14,9 @@ public class MyCalculator {
     }
 
     public static int divide(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero is not allowed.");
+        }
         return a / b;
     }
 
@@ -24,6 +27,13 @@ public class MyCalculator {
         return answer;
     }
 
+    public static int modulus(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("Modulus by zero is not allowed.");
+        }
+        return a % b;
+    }
+
     public static void main(String[] args) {
         MyCalculator myCalc = new MyCalculator();
         System.out.println(myCalc.add(1, 2));
@@ -31,5 +41,6 @@ public class MyCalculator {
         System.out.println(MyCalculator.multiply(1, 2));
         System.out.println(MyCalculator.divide(1, 2));
         System.out.println(MyCalculator.power(1, 2));
+        System.out.println(MyCalculator.modulus(5, 3));
     }
 }
