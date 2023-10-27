@@ -29,5 +29,5 @@ pipeline {
 				echo  'Build Success!'
 				}
 			}
-		}
+		
 	}		
